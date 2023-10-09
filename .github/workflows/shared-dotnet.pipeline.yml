@@ -25,5 +25,5 @@ jobs:
         dotnet restore ./shared/dotnet
         dotnet build ./shared/dotnet -c Release --no-restore
         dotnet test ./shared/dotnet --no-restore
-        dotnet pack ./shared/dotnet - c Release --no-restore --no-build -o ./shared/dotnet/pkg --version-suffix "ci"
+        dotnet pack ./shared/dotnet -c Release --no-restore --no-build -o ./shared/dotnet/pkg --version-suffix "ci"
         dotnet nuget push "shared/dotnet/pkg/**/*.nupkg" -s "https://nuget.pkg.github.com/derrysmith/index.json" -k "${{ secrets.GH_PACKAGES_PAT }}" --skip-duplicate
