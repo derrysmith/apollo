@@ -1,0 +1,25 @@
+name: CI/CD Pipeline for Shared .NET Core Libraries
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build-test-pack:
+    name: Build/Test/Pack .NET Core Libraries
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v2
+    
+    - name: Configure .NET Core
+      uses: actions/setup-dotnet@v1
+    
+    - name: Build/Test/Pack
+      run: |
+        dotnet restore ./shared/dotnet
+        dotnet build ./shared/dotnet -c Release --no-restore
+        dotnet test ./shared/dotnet --no-restore --no-build
