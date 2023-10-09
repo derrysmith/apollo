@@ -9,7 +9,7 @@ public abstract record EntityKey<T> : IEntityKey
 		=> _value = value;
 
 	public static implicit operator string(EntityKey<T> entity)
-		=> entity.ToString();
+		=> entity._value.ToString()!;
 
 	public static implicit operator T(EntityKey<T> entity)
 		=> entity._value;
