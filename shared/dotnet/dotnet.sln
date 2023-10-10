@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{EE6DEF91-927E-4C50-BB7F-5F0A042D4F50}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DS.Apollo.Core", "src\DS.Apollo.Core\DS.Apollo.Core.csproj", "{F1D2689C-B2F1-431C-B77D-17A14D877707}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DS.Apollo.Core.Domain", "src\DS.Apollo.Core.Domain\DS.Apollo.Core.Domain.csproj", "{5CF8FD14-AB2C-486B-B49C-E720AE957CD2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{C12E084E-5A6C-47FB-84F6-C153B962B058}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DS.Tests.Apollo.Core.Domain", "test\DS.Tests.Apollo.Core.Domain\DS.Tests.Apollo.Core.Domain.csproj", "{97AF61C1-B73F-492D-9AFE-378677434522}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{F1D2689C-B2F1-431C-B77D-17A14D877707} = {EE6DEF91-927E-4C50-BB7F-5F0A042D4F50}
+		{5CF8FD14-AB2C-486B-B49C-E720AE957CD2} = {EE6DEF91-927E-4C50-BB7F-5F0A042D4F50}
+		{97AF61C1-B73F-492D-9AFE-378677434522} = {C12E084E-5A6C-47FB-84F6-C153B962B058}
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F1D2689C-B2F1-431C-B77D-17A14D877707}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F1D2689C-B2F1-431C-B77D-17A14D877707}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F1D2689C-B2F1-431C-B77D-17A14D877707}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F1D2689C-B2F1-431C-B77D-17A14D877707}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5CF8FD14-AB2C-486B-B49C-E720AE957CD2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5CF8FD14-AB2C-486B-B49C-E720AE957CD2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5CF8FD14-AB2C-486B-B49C-E720AE957CD2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5CF8FD14-AB2C-486B-B49C-E720AE957CD2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{97AF61C1-B73F-492D-9AFE-378677434522}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{97AF61C1-B73F-492D-9AFE-378677434522}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{97AF61C1-B73F-492D-9AFE-378677434522}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{97AF61C1-B73F-492D-9AFE-378677434522}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
