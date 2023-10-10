@@ -44,16 +44,16 @@ jobs:
       id: gitversion
       uses: gittools/actions/gitversion/execute@v0
     
-    - name: Display Version
-      run: echo "gitversion ${{ steps.gitversion.outputs }}"
+    # - name: Display Version
+    #   run: echo "gitversion ${{ steps.gitversion.outputs }}"
 
-    # - name: Package
-    #   run: dotnet pack --configuration Release --no-restore --no-build -o pkg --version-suffix "ci"
-    #   working-directory: ./shared/dotnet
+    - name: Package (1.2.3-ci.{PR}.{commits}, 1.2.3-1.0011)
+      run: dotnet pack --configuration Release --no-restore --no-build -o pkg --version-suffix "${{ steps.gitversion.outputs.NuGetPreReleaseTag }}"
+      working-directory: ./shared/dotnet
 
-    # - name: Publish
-    #   run: dotnet nuget push "pkg/**/*.nupkg" -s "${{ vars.GH_PACKAGES_SOURCE }}" -k "${{ secrets.GH_PACKAGES_PAT }}" --skip-duplicate
-    #   working-directory: ./shared/dotnet
+    - name: Publish
+      run: dotnet nuget push "pkg/**/*.nupkg" -s "${{ vars.GH_PACKAGES_SOURCE }}" -k "${{ secrets.GH_PACKAGES_PAT }}" --skip-duplicate
+      working-directory: ./shared/dotnet
         
         
         
