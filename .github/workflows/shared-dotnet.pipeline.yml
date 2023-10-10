@@ -3,8 +3,16 @@ name: CI/CD Pipeline for Shared .NET Core Libraries
 on:
   push:
     branches: [ main ]
+    # paths:
+    #   - '.github/workflows/**'
+    #   - 'shared/dotnet/**'
+    #   - '!shared/dotnet/**/*.md'
   pull_request:
     branches: [ main ]
+    # paths:
+    #   - '.github/workflows/**'
+    #   - 'shared/dotnet/**'
+    #   - '!shared/dotnet/**/*.md'
 
 jobs:
   build-test-pack:
@@ -28,6 +36,11 @@ jobs:
     #     versionSpec: '5.x'
     #     preferLatestVersion: true
     
+    - name: Display Info
+      run: |
+        echo ${{ github.context }}
+        echo "${{ toJSON(github) }}"
+
     - name: Restore
       run: dotnet restore
       working-directory: ./shared/dotnet
@@ -47,9 +60,14 @@ jobs:
     # - name: Display Version
     #   run: echo "gitversion ${{ steps.gitversion.outputs }}"
 
-    - name: Package
+    - name: Package (pre-release)
       run: dotnet pack --configuration Release --no-restore --no-build -o pkg --version-suffix "ci.$(date +%Y%m%d%H%M%S)"
       working-directory: ./shared/dotnet
+
+    # - name: Package
+    #   if: github.event.pull_request.merged == true
+    #   run: dotnet pack --configuration Release --no-restore --no-build -o pkg
+    #   working-directory: ./shared/dotnet
 
     - name: Publish
       run: dotnet nuget push "pkg/**/*.nupkg" -s "${{ vars.GH_PACKAGES_SOURCE }}" -k "${{ secrets.GH_PACKAGES_PAT }}" --skip-duplicate
