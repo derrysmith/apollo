@@ -13,6 +13,7 @@ public class EntityKeyTests
 		// act
 		string testEntityKeyVal = testEntityKey;
 		
+		// assert
 		Assert.Equal("123", testEntityKeyVal);
 	}
 
@@ -25,13 +26,14 @@ public class EntityKeyTests
 		// act
 		int testEntityKeyVal = testEntityKey;
 		
+		// assert
 		Assert.Equal(123, testEntityKeyVal);
 	}
-}
 
-internal record TestEntityKey : EntityKey<int>
-{
-	public TestEntityKey(int value) : base(value)
+	private record TestEntityKey : EntityKey<int>
 	{
+		public TestEntityKey(int value) : base(value)
+		{
+		}
 	}
 }

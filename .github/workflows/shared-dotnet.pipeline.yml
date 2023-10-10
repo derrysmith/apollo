@@ -22,11 +22,11 @@ jobs:
       with:
         dotnet-version: '7.0.x'
     
-    - name: Configure GitVersion
-      uses: gittools/actions/gitversion/setup@v0
-      with:
-        versionSpec: '5.x'
-        preferLatestVersion: true
+    # - name: Configure GitVersion
+    #   uses: gittools/actions/gitversion/setup@v0
+    #   with:
+    #     versionSpec: '5.x'
+    #     preferLatestVersion: true
     
     - name: Restore
       run: dotnet restore
@@ -40,15 +40,15 @@ jobs:
       run: dotnet test --no-restore
       working-directory: ./shared/dotnet
 
-    - name: Version
-      id: gitversion
-      uses: gittools/actions/gitversion/execute@v0
+    # - name: Version
+    #   id: gitversion
+    #   uses: gittools/actions/gitversion/execute@v0
     
     # - name: Display Version
     #   run: echo "gitversion ${{ steps.gitversion.outputs }}"
 
-    - name: Package (1.2.3-ci.{PR}.{commits}, 1.2.3-1.0011)
-      run: dotnet pack --configuration Release --no-restore --no-build -o pkg --version-suffix "${{ steps.gitversion.outputs.NuGetPreReleaseTag }}"
+    - name: Package
+      run: dotnet pack --configuration Release --no-restore --no-build -o pkg --version-suffix "ci.$(date +%Y%m%d%H%M%S)"
       working-directory: ./shared/dotnet
 
     - name: Publish
