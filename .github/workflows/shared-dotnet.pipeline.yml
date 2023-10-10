@@ -19,6 +19,11 @@ jobs:
     name: Build/Test/Pack .NET Core Libraries
     runs-on: ubuntu-latest
 
+    env:
+      PULL_REQUEST_NUMBER: printf "%05d" ${{ github.event.pull_request.number }}
+      PULL_REQUEST_RUN_COUNT: printf "%03d" ${{ github.run_number }}
+      PRE_RELEASE_VERSION: "ci.${{ env.PULL_REQUEST_NUMBER }}.${{ env.PULL_REQUEST_RUN_COUNT }}"
+
     steps:
     - name: Checkout Repository
       uses: actions/checkout@v3
@@ -37,9 +42,7 @@ jobs:
     #     preferLatestVersion: true
     
     - name: Display Info
-      run: |
-        echo ${{ github.context }}
-        echo "${{ toJSON(github) }}"
+      run: echo "${{ env.PRE_RELEASE_VERSION }}"
 
     - name: Restore
       run: dotnet restore
@@ -57,8 +60,8 @@ jobs:
     #   id: gitversion
     #   uses: gittools/actions/gitversion/execute@v0
     
-    # - name: Display Version
-    #   run: echo "gitversion ${{ steps.gitversion.outputs }}"
+    - name: Display Version
+      run: 
 
     - name: Package (pre-release)
       run: dotnet pack --configuration Release --no-restore --no-build -o pkg --version-suffix "ci.$(date +%Y%m%d%H%M%S)"
