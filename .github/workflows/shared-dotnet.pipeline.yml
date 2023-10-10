@@ -42,7 +42,7 @@ jobs:
 
     - name: Package (pre-release)
       if: github.event_name == 'pull_request'
-      run: dotnet pack --configuration Release --no-restore --no-build -o pkg --version-suffix "ci-$(printf "%05d" ${{ github.event.pull_request.number }})-$(printf "%03d" ${{ github..event.pull_request.commits }})"
+      run: dotnet pack --configuration Release --no-restore --no-build -o pkg --version-suffix "ci-$(printf "%05d" ${{ github.event.pull_request.number }})-$(printf "%03d" ${{ github.event.pull_request.commits }})"
       working-directory: ./shared/dotnet
 
     - name: Package
