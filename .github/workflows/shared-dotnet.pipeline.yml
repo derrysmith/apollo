@@ -22,7 +22,6 @@ jobs:
     env:
       PULL_REQUEST_NUMBER: printf "%05d" ${{ github.event.pull_request.number }}
       PULL_REQUEST_RUN_COUNT: printf "%03d" ${{ github.run_number }}
-      PRE_RELEASE_VERSION: "ci.$PULL_REQUEST_NUMBER.$PULL_REQUEST_RUN_COUNT"
 
     steps:
     - name: Checkout Repository
@@ -42,7 +41,7 @@ jobs:
     #     preferLatestVersion: true
     
     - name: Display Info
-      run: echo "$PRE_RELEASE_VERSION"
+      run: echo "ci.$PULL_REQUEST_NUMBER.$PULL_REQUEST_RUN_COUNT"
 
     - name: Restore
       run: dotnet restore
