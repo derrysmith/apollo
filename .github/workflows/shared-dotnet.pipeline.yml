@@ -14,16 +14,48 @@ jobs:
     steps:
     - name: Checkout Repository
       uses: actions/checkout@v3
+      with:
+        fetch-depth: 0
     
     - name: Configure .NET Core
       uses: actions/setup-dotnet@v3
       with:
         dotnet-version: '7.0.x'
     
-    - name: Build/Test/Pack
-      run: |
-        dotnet restore ./shared/dotnet
-        dotnet build ./shared/dotnet -c Release --no-restore
-        dotnet test ./shared/dotnet --no-restore
-        dotnet pack ./shared/dotnet -c Release --no-restore --no-build -o ./shared/dotnet/pkg --version-suffix "ci"
-        dotnet nuget push "shared/dotnet/pkg/**/*.nupkg" -s "https://nuget.pkg.github.com/derrysmith/index.json" -k "${{ secrets.GH_PACKAGES_PAT }}" --skip-duplicate
+    - name: Configure GitVersion
+      uses: gittools/actions/gitversion/setup@v0
+      with:
+        versionSpec: '5.x'
+        preferLatestVersion: true
+    
+    - name: Restore
+      run: dotnet restore
+      working-directory: ./shared/dotnet
+    
+    - name: Compile
+      run: dotnet build --configuration Release --no-restore
+      working-directory: ./shared/dotnet
+    
+    - name: Testing
+      run: dotnet test --no-restore
+      working-directory: ./shared/dotnet
+
+    - name: Version
+      id: gitversion
+      uses: gittools/actions/gitversion/execute@v0
+    
+    - name: Display Version
+      run: echo "gitversion ${{ steps.gitversion.outputs }}"
+
+    # - name: Package
+    #   run: dotnet pack --configuration Release --no-restore --no-build -o pkg --version-suffix "ci"
+    #   working-directory: ./shared/dotnet
+
+    # - name: Publish
+    #   run: dotnet nuget push "pkg/**/*.nupkg" -s "${{ vars.GH_PACKAGES_SOURCE }}" -k "${{ secrets.GH_PACKAGES_PAT }}" --skip-duplicate
+    #   working-directory: ./shared/dotnet
+        
+        
+        
+        
+        
