@@ -19,10 +19,6 @@ jobs:
     name: Build/Test/Pack .NET Core Libraries
     runs-on: ubuntu-latest
 
-    env:
-      PULL_REQUEST_NUMBER: printf "%05d" ${{ github.event.pull_request.number }}
-      PULL_REQUEST_RUN_COUNT: printf "%03d" ${{ github.run_number }}
-
     steps:
     - name: Checkout Repository
       uses: actions/checkout@v3
@@ -41,36 +37,36 @@ jobs:
     #     preferLatestVersion: true
     
     - name: Display Info
-      run: echo "ci.$PULL_REQUEST_NUMBER.$PULL_REQUEST_RUN_COUNT"
+      run: echo "ci.$(printf "%05d" ${{ github.event.pull_request.number }}).$(printf "%03d" ${{ github.run_number }})"
 
-    - name: Restore
-      run: dotnet restore
-      working-directory: ./shared/dotnet
+    # - name: Restore
+    #   run: dotnet restore
+    #   working-directory: ./shared/dotnet
     
-    - name: Compile
-      run: dotnet build --configuration Release --no-restore
-      working-directory: ./shared/dotnet
+    # - name: Compile
+    #   run: dotnet build --configuration Release --no-restore
+    #   working-directory: ./shared/dotnet
     
-    - name: Testing
-      run: dotnet test --no-restore
-      working-directory: ./shared/dotnet
+    # - name: Testing
+    #   run: dotnet test --no-restore
+    #   working-directory: ./shared/dotnet
 
     # - name: Version
     #   id: gitversion
     #   uses: gittools/actions/gitversion/execute@v0
 
-    - name: Package (pre-release)
-      run: dotnet pack --configuration Release --no-restore --no-build -o pkg --version-suffix "ci.$(date +%Y%m%d%H%M%S)"
-      working-directory: ./shared/dotnet
+    # - name: Package (pre-release)
+    #   run: dotnet pack --configuration Release --no-restore --no-build -o pkg --version-suffix "ci.$(date +%Y%m%d%H%M%S)"
+    #   working-directory: ./shared/dotnet
 
     # - name: Package
     #   if: github.event.pull_request.merged == true
     #   run: dotnet pack --configuration Release --no-restore --no-build -o pkg
     #   working-directory: ./shared/dotnet
 
-    - name: Publish
-      run: dotnet nuget push "pkg/**/*.nupkg" -s "${{ vars.GH_PACKAGES_SOURCE }}" -k "${{ secrets.GH_PACKAGES_PAT }}" --skip-duplicate
-      working-directory: ./shared/dotnet
+    # - name: Publish
+    #   run: dotnet nuget push "pkg/**/*.nupkg" -s "${{ vars.GH_PACKAGES_SOURCE }}" -k "${{ secrets.GH_PACKAGES_PAT }}" --skip-duplicate
+    #   working-directory: ./shared/dotnet
         
         
         
