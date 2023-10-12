@@ -1,7 +1,6 @@
 namespace DS.Apollo.Core.Domain.Entities;
 
 public abstract record EntityKey<T> : IEntityKey
-	where T : notnull
 {
 	private readonly T _value;
 

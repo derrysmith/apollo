@@ -7,7 +7,6 @@ public interface IEntity
 }
 
 public interface IEntity<out TEntityKey> : IEntity
-	where TEntityKey : IEntityKey
 {
 	TEntityKey Id { get; }
 }

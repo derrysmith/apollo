@@ -1,7 +1,7 @@
-﻿using DS.Apollo.Core.Domain.Entities;
+using DS.Apollo.Core.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 
-namespace DS.Apollo.Data;
+namespace DS.Apollo.Data.Database;
 
 public abstract class EntityFxCoreDbContext : DbContext
 {
@@ -13,9 +13,8 @@ public abstract class EntityFxCoreDbContext : DbContext
 
 	protected string DefaultSchema { get; }
 
-	public override Task<int> SaveChangesAsync(CancellationToken cancellationToken = default)
+	public override Task<int> SaveChangesAsync(CancellationToken cancellationToken = new CancellationToken())
 	{
-		// add audit timestamps
 		var currentDateTime = DateTimeOffset.UtcNow;
 
 		foreach (var entry in this.ChangeTracker.Entries<IEntity>())
