@@ -12,6 +12,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DS.Tests.Apollo.Core.Domain
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DS.Apollo.Data", "src\DS.Apollo.Data\DS.Apollo.Data.csproj", "{86DDA613-3338-41CF-ADA5-5C776914E14B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DS.Apollo.Core.Events", "src\DS.Apollo.Core.Events\DS.Apollo.Core.Events.csproj", "{FD4A3C35-69E1-4F7D-AC07-2DE4AACAF058}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -22,6 +24,7 @@ Global
 		{5CF8FD14-AB2C-486B-B49C-E720AE957CD2} = {EE6DEF91-927E-4C50-BB7F-5F0A042D4F50}
 		{97AF61C1-B73F-492D-9AFE-378677434522} = {C12E084E-5A6C-47FB-84F6-C153B962B058}
 		{86DDA613-3338-41CF-ADA5-5C776914E14B} = {EE6DEF91-927E-4C50-BB7F-5F0A042D4F50}
+		{FD4A3C35-69E1-4F7D-AC07-2DE4AACAF058} = {EE6DEF91-927E-4C50-BB7F-5F0A042D4F50}
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{F1D2689C-B2F1-431C-B77D-17A14D877707}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -40,5 +43,9 @@ Global
 		{86DDA613-3338-41CF-ADA5-5C776914E14B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{86DDA613-3338-41CF-ADA5-5C776914E14B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{86DDA613-3338-41CF-ADA5-5C776914E14B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FD4A3C35-69E1-4F7D-AC07-2DE4AACAF058}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD4A3C35-69E1-4F7D-AC07-2DE4AACAF058}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD4A3C35-69E1-4F7D-AC07-2DE4AACAF058}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD4A3C35-69E1-4F7D-AC07-2DE4AACAF058}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
