@@ -7,12 +7,7 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\DS.Apollo.Core\DS.Apollo.Core.csproj" />
-    </ItemGroup>
-
-    <ItemGroup>
-      <PackageReference Include="MassTransit" Version="8.1.1" />
-      <PackageReference Include="MediatR" Version="12.1.1" />
+      <PackageReference Include="DS.Apollo.Core.Domain" Version="1.0.0" />
     </ItemGroup>
 
 </Project>

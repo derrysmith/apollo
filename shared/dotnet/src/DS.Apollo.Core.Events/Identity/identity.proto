@@ -1,0 +1,31 @@
+syntax = "proto3";
+
+//import "google/protobuf/wrappers.proto";
+option csharp_namespace = "DS.Apollo.Core.Events.Identity";
+package identity;
+
+message AuthProfileSignedIn {
+  string firstName = 1;
+  string lastName = 2;
+  
+  string email = 3;
+  bool emailIsVerified = 4;
+  
+  string phone = 5;
+  bool phoneIsVerified = 6;
+  
+  string authUserId = 7;
+  string authUserName = 8;
+  string authProviderName = 9;
+  string authProviderType = 10;
+}
+message AuthProfileSignedUp {}
+
+message UserProfileCreated {}
+message UserProfileRenamed {}
+
+message UserProfileEmailAdded {}
+message UserProfileEmailVerified {}
+
+message UserProfilePhoneAdded {}
+message UserProfilePhoneVerified {}
