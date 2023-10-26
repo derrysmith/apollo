@@ -4,7 +4,7 @@ using MassTransit;
 namespace DS.Apollo.Core.Domain.Handlers;
 
 public abstract class IntegrationEventHandler<T> : MassTransit.IConsumer<T>
-	where T : class, IIntegrationEvent
+	where T : class
 {
 	Task IConsumer<T>.Consume(ConsumeContext<T> context)
 	{
