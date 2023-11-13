@@ -1,6 +1,0 @@
-<Project>
-    <ItemGroup>
-        <PackageReference Include="FakeItEasy" Version="7.4.0" />
-        <PackageReference Include="Shouldly" Version="4.2.1" />
-    </ItemGroup>
-</Project>

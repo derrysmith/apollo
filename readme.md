@@ -3,6 +3,11 @@
 ```
 > derrysmith/apollo
 	> client
+		> apollo-sdk
+		> apollo-sdk-dotnet
+		> apollo-sdk-nodejs
+		> apollo-web
+		> apollo-web-admin
 	> server
 	> shared
 ```
