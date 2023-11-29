@@ -1,0 +1,21 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{7D5C4DF4-8E00-4542-8B5F-4F5CB5F24B67}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Apollo.Api", "src\Apollo.Api\Apollo.Api.csproj", "{D2A49ADD-73F3-4D90-A9F6-6AD0F2E9CD01}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{D2A49ADD-73F3-4D90-A9F6-6AD0F2E9CD01} = {7D5C4DF4-8E00-4542-8B5F-4F5CB5F24B67}
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D2A49ADD-73F3-4D90-A9F6-6AD0F2E9CD01}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D2A49ADD-73F3-4D90-A9F6-6AD0F2E9CD01}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D2A49ADD-73F3-4D90-A9F6-6AD0F2E9CD01}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D2A49ADD-73F3-4D90-A9F6-6AD0F2E9CD01}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

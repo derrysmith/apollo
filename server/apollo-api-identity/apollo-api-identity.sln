@@ -1,0 +1,51 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{B32E62C9-CE50-46E1-A8AF-E445FBD41A08}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Apollo.Identity.Core.Domain", "src\Apollo.Identity.Core.Domain\Apollo.Identity.Core.Domain.csproj", "{1F45D38F-86FB-484E-B897-1467544BD1FD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{46970530-3A0E-47C9-8A8D-87943FED2B61}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Apollo.Tests.Identity.Core.Domain", "test\Apollo.Tests.Identity.Core.Domain\Apollo.Tests.Identity.Core.Domain.csproj", "{7519B9A0-6205-49C3-9A8D-66CDAFAC9B3C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Apollo.Identity.Core.Application", "src\Apollo.Identity.Core.Application\Apollo.Identity.Core.Application.csproj", "{43F7416E-3207-4470-8834-301D2B7547D7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Apollo.Identity.Core.Infrastructure", "src\Apollo.Identity.Core.Infrastructure\Apollo.Identity.Core.Infrastructure.csproj", "{B933E19D-CD99-43AE-9515-23DAB27DAB89}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Apollo.Identity.Api", "src\Apollo.Identity.Api\Apollo.Identity.Api.csproj", "{BB571A33-B0D3-450C-8A70-63ECFB91E252}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{1F45D38F-86FB-484E-B897-1467544BD1FD} = {B32E62C9-CE50-46E1-A8AF-E445FBD41A08}
+		{7519B9A0-6205-49C3-9A8D-66CDAFAC9B3C} = {46970530-3A0E-47C9-8A8D-87943FED2B61}
+		{43F7416E-3207-4470-8834-301D2B7547D7} = {B32E62C9-CE50-46E1-A8AF-E445FBD41A08}
+		{B933E19D-CD99-43AE-9515-23DAB27DAB89} = {B32E62C9-CE50-46E1-A8AF-E445FBD41A08}
+		{BB571A33-B0D3-450C-8A70-63ECFB91E252} = {B32E62C9-CE50-46E1-A8AF-E445FBD41A08}
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1F45D38F-86FB-484E-B897-1467544BD1FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1F45D38F-86FB-484E-B897-1467544BD1FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1F45D38F-86FB-484E-B897-1467544BD1FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1F45D38F-86FB-484E-B897-1467544BD1FD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7519B9A0-6205-49C3-9A8D-66CDAFAC9B3C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7519B9A0-6205-49C3-9A8D-66CDAFAC9B3C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7519B9A0-6205-49C3-9A8D-66CDAFAC9B3C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7519B9A0-6205-49C3-9A8D-66CDAFAC9B3C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{43F7416E-3207-4470-8834-301D2B7547D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{43F7416E-3207-4470-8834-301D2B7547D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{43F7416E-3207-4470-8834-301D2B7547D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{43F7416E-3207-4470-8834-301D2B7547D7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B933E19D-CD99-43AE-9515-23DAB27DAB89}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B933E19D-CD99-43AE-9515-23DAB27DAB89}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B933E19D-CD99-43AE-9515-23DAB27DAB89}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B933E19D-CD99-43AE-9515-23DAB27DAB89}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BB571A33-B0D3-450C-8A70-63ECFB91E252}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB571A33-B0D3-450C-8A70-63ECFB91E252}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BB571A33-B0D3-450C-8A70-63ECFB91E252}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BB571A33-B0D3-450C-8A70-63ECFB91E252}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net7.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Apollo.Contacts.Core\Apollo.Contacts.Core.csproj" />
+      <ProjectReference Include="..\Apollo.Contacts.Data\Apollo.Contacts.Data.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="HotChocolate.AspNetCore" Version="13.7.0" />
+      <PackageReference Include="HotChocolate.Data.EntityFramework" Version="13.7.0" />
+      <PackageReference Include="HotChocolate.Types.Selections" Version="10.5.5" />
+    </ItemGroup>
+
+</Project>

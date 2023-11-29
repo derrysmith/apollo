@@ -1,0 +1,22 @@
+{
+	"Routes": [
+		{
+			"UpstreamPathTemplate": "/identity/{path}",
+			"UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ],
+			
+			"DownstreamPathTemplate": "/{path}",
+			"DownstreamScheme": "https",
+			"DownstreamHostAndPorts": [
+				{
+					"Host": "localhost",
+					"Port": 7011
+				}
+			]
+		}
+	],
+
+	"GlobalConfiguration": {
+		"BaseUrl": "https://localhost:7236",
+		"RequestIdKey": "X-Apollo-Request-Id"
+	}
+}
