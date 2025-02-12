@@ -13,4 +13,4 @@ jobs:
       - name: compile packages
         run: dotnet build ./apollo-sdk --configuration Release
       - name: testing packages
-        run: dotnet test ./apollo-sdk --no-restore --no-build
+        run: dotnet test ./apollo-sdk --no-restore --no-build --configuration Release
