@@ -1,0 +1,56 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{8C4FE618-12E8-4BC1-8893-325C3D93D8E8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Apollo.Core.Domain", "src\Apollo.Core.Domain\Apollo.Core.Domain.csproj", "{11DFBF95-6E68-48F3-836C-F522459E651D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Apollo.Libraries.Core.Domain", "src\Apollo.Libraries.Core.Domain\Apollo.Libraries.Core.Domain.csproj", "{61A86A2D-1159-4EC5-8623-B8DB8A2F5E3B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Apollo.Core.Application", "src\Apollo.Core.Application\Apollo.Core.Application.csproj", "{79C7BDB7-8DBF-4DFF-8D4F-F917A4DE4E61}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Apollo.Infrastructure.Data.EF", "src\Apollo.Infrastructure.Data.EF\Apollo.Infrastructure.Data.EF.csproj", "{E7276FF3-717B-4EAF-AED8-7C1C1DC119AA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Apollo.Api", "src\Apollo.Api\Apollo.Api.csproj", "{AE14818B-067F-4EAC-B22A-94FB01007F34}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Apollo.Libraries.Core.Common", "src\Apollo.Libraries.Core.Common\Apollo.Libraries.Core.Common.csproj", "{423668AD-4E71-40D1-A52D-6E409B07F1A8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{11DFBF95-6E68-48F3-836C-F522459E651D} = {8C4FE618-12E8-4BC1-8893-325C3D93D8E8}
+		{61A86A2D-1159-4EC5-8623-B8DB8A2F5E3B} = {8C4FE618-12E8-4BC1-8893-325C3D93D8E8}
+		{79C7BDB7-8DBF-4DFF-8D4F-F917A4DE4E61} = {8C4FE618-12E8-4BC1-8893-325C3D93D8E8}
+		{E7276FF3-717B-4EAF-AED8-7C1C1DC119AA} = {8C4FE618-12E8-4BC1-8893-325C3D93D8E8}
+		{AE14818B-067F-4EAC-B22A-94FB01007F34} = {8C4FE618-12E8-4BC1-8893-325C3D93D8E8}
+		{423668AD-4E71-40D1-A52D-6E409B07F1A8} = {8C4FE618-12E8-4BC1-8893-325C3D93D8E8}
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{11DFBF95-6E68-48F3-836C-F522459E651D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{11DFBF95-6E68-48F3-836C-F522459E651D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{11DFBF95-6E68-48F3-836C-F522459E651D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{11DFBF95-6E68-48F3-836C-F522459E651D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{61A86A2D-1159-4EC5-8623-B8DB8A2F5E3B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{61A86A2D-1159-4EC5-8623-B8DB8A2F5E3B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{61A86A2D-1159-4EC5-8623-B8DB8A2F5E3B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{61A86A2D-1159-4EC5-8623-B8DB8A2F5E3B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{79C7BDB7-8DBF-4DFF-8D4F-F917A4DE4E61}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{79C7BDB7-8DBF-4DFF-8D4F-F917A4DE4E61}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{79C7BDB7-8DBF-4DFF-8D4F-F917A4DE4E61}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{79C7BDB7-8DBF-4DFF-8D4F-F917A4DE4E61}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E7276FF3-717B-4EAF-AED8-7C1C1DC119AA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E7276FF3-717B-4EAF-AED8-7C1C1DC119AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E7276FF3-717B-4EAF-AED8-7C1C1DC119AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E7276FF3-717B-4EAF-AED8-7C1C1DC119AA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AE14818B-067F-4EAC-B22A-94FB01007F34}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE14818B-067F-4EAC-B22A-94FB01007F34}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE14818B-067F-4EAC-B22A-94FB01007F34}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE14818B-067F-4EAC-B22A-94FB01007F34}.Release|Any CPU.Build.0 = Release|Any CPU
+		{423668AD-4E71-40D1-A52D-6E409B07F1A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{423668AD-4E71-40D1-A52D-6E409B07F1A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{423668AD-4E71-40D1-A52D-6E409B07F1A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{423668AD-4E71-40D1-A52D-6E409B07F1A8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

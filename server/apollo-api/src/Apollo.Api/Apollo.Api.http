@@ -1,0 +1,6 @@
+@host = http://localhost:5119
+
+###
+
+GET {{host}}/identity/users/1739073484
+Accept: application/json
