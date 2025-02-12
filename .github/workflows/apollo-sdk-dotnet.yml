@@ -15,6 +15,6 @@ jobs:
       - name: testing libraries
         run: dotnet test ./apollo-sdk --no-restore --no-build --configuration Release
       - name: package libraries
-        run: dotnet pack ./apollo-sdk --no-restore --no-build --configuration Release -p:PackageVersion=${{ github.ref_name }} --output ./pkg
-      - name: display packages
-        run: ls -al
+        run: dotnet pack ./apollo-sdk --no-restore --no-build --configuration Release --output ./apollo-sdk/pkg
+      - name: publish libraries
+        run: dotnet nuget push ./apollo-sdk/pkg/**/*.nupkg -s https://nuget.pkg.github.com/derrysmith/index.json -k ${{ secrets.NUGET_AUTH_TOKEN }}
