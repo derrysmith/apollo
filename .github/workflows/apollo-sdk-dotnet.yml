@@ -10,9 +10,7 @@ jobs:
     steps:
       - name: checkout repository
         uses: actions/checkout@v4
-      # - name: configure .net core
-      #   uses: actions/setup-dotnet@v2
-      #   with:
-      #     dotnet-version: '8.0.x'
       - name: compile packages
-        run: dotnet --version
+        run: dotnet build ./apollo-sdk --configuration Release
+      - name: testing packages
+        run: dotnet test ./apollo-sdk --no-restore --no-build
