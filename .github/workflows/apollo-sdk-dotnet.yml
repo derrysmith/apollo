@@ -10,9 +10,9 @@ jobs:
     steps:
       - name: checkout repository
         uses: actions/checkout@v4
-      - name: configure .net core
-        uses: actions/setup-dotnet@v2
-        with:
-          dotnet-version: '8.0.x'
+      # - name: configure .net core
+      #   uses: actions/setup-dotnet@v2
+      #   with:
+      #     dotnet-version: '8.0.x'
       - name: compile packages
-        run: echo 'compiling packages...'
+        run: dotnet --version
