@@ -10,7 +10,11 @@ jobs:
     steps:
       - name: checkout repository
         uses: actions/checkout@v4
-      - name: compile packages
+      - name: compile libraries
         run: dotnet build ./apollo-sdk --configuration Release
-      - name: testing packages
+      - name: testing libraries
         run: dotnet test ./apollo-sdk --no-restore --no-build --configuration Release
+      - name: package libraries
+        run: dotnet pack ./apollo-sdk --no-restore --no-build --configuration Release -p:PackageVersion=${{ github.ref_name }} --output ./pkg
+      - name: display packages
+        run: ls -al
