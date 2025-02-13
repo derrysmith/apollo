@@ -2,6 +2,8 @@ name: Compile and Publish Apollo SDK NuGet Packages
 
 on:
   push:
+    tags:
+      - '*.*.*'
 
 jobs:
   compile:
@@ -15,6 +17,6 @@ jobs:
       - name: testing libraries
         run: dotnet test ./apollo-sdk --no-restore --no-build --configuration Release
       - name: package libraries
-        run: dotnet pack ./apollo-sdk --no-restore --no-build --configuration Release --output ./apollo-sdk/pkg
+        run: dotnet pack ./apollo-sdk --no-restore --no-build --configuration Release --output ./apollo-sdk/pkg -p:PackageVersion=${{ github.ref_name }}
       - name: publish libraries
         run: dotnet nuget push ./apollo-sdk/pkg/**/*.nupkg -s https://nuget.pkg.github.com/derrysmith/index.json -k ${{ secrets.NUGET_AUTH_TOKEN }}
