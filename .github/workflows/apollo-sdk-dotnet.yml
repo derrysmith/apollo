@@ -32,11 +32,12 @@ jobs:
 
   publish:
     name: Publish Apollo SDK NuGet Packages
+    needs: compile
     runs-on: ubuntu-latest
     environment: production
     permissions:
       packages: write
-      
+
     steps:
       - name: upload packages
         uses: actions/download-artifact@v4
