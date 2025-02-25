@@ -12,9 +12,6 @@ jobs:
   compile:
     name: Compile Apollo SDK NuGet Packages
     runs-on: ubuntu-latest
-    environment: production
-    permissions:
-      packages: write
     steps:
       - name: checkout repository
         uses: actions/checkout@v4
@@ -28,5 +25,23 @@ jobs:
       - name: package libraries
         run: dotnet pack ./apollo-sdk --no-restore --no-build --configuration Release --output ./apollo-sdk/pkg
 
+      - name: upload packages
+        uses: actions/upload-artifact@v4
+        with:
+          path: ./apollo-sdk/pkg
+
+  publish:
+    name: Publish Apollo SDK NuGet Packages
+    runs-on: ubuntu-latest
+    environment: production
+    permissions:
+      packages: write
+      
+    steps:
+      - name: upload packages
+        uses: actions/download-artifact@v4
+        with:
+          path: ./apollo-sdk/pkg
+
       - name: publish libraries
-        run: dotnet nuget push ./apollo-sdk/pkg/**/*.nupkg -s ${{ env.NUGET_SOURCE }} https://nuget.pkg.github.com/derrysmith/index.json -k ${{ secrets.GITHUB_TOKEN }} --skip-duplicate
+        run: dotnet nuget push ./apollo-sdk/pkg/**/*.nupkg -s ${{ vars.NUGET_SOURCE }} -k ${{ secrets.GITHUB_TOKEN }} --skip-duplicate
