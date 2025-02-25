@@ -26,6 +26,7 @@ jobs:
         run: dotnet pack ./apollo-sdk --no-restore --no-build --configuration Release --output ./apollo-sdk/pkg
 
       - name: upload packages
+        if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }}
         uses: actions/upload-artifact@v4
         with:
           name: apollo-sdk-nuget-packages
@@ -33,7 +34,7 @@ jobs:
 
   publish: # only run if we're committing to main
     name: Publish Apollo SDK NuGet Packages
-    # if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }}
+    if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }}
     needs: compile
     runs-on: ubuntu-latest
     environment: production
@@ -41,16 +42,11 @@ jobs:
       packages: write
 
     steps:
-      - name: echo vars
-        run: |
-          echo ${{ github.ref }}
-          echo ${{ github.ref_name }}
-          echo ${{ github.event_name }}
-      # - name: upload packages
-      #   uses: actions/download-artifact@v4
-      #   with:
-      #     name: apollo-sdk-nuget-packages
-      #     path: ./apollo-sdk/pkg
+      - name: upload packages
+        uses: actions/download-artifact@v4
+        with:
+          name: apollo-sdk-nuget-packages
+          path: ./apollo-sdk/pkg
 
-      # - name: publish libraries
-      #   run: dotnet nuget push ./apollo-sdk/pkg/**/*.nupkg -s ${{ vars.NUGET_SOURCE }} -k ${{ secrets.GITHUB_TOKEN }} --skip-duplicate
+      - name: publish libraries
+        run: dotnet nuget push ./apollo-sdk/pkg/**/*.nupkg -s ${{ vars.NUGET_SOURCE }} -k ${{ secrets.GITHUB_TOKEN }} --skip-duplicate
