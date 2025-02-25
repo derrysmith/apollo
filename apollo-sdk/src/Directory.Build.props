@@ -1,5 +1,8 @@
 <Project>
 	<PropertyGroup>
+        <Authors>derrysmith</Authors>
+        <RepositoryType>git</RepositoryType>
+        <RepositoryUrl>https://github.com/derrysmith/apollo</RepositoryUrl>
 		<Version>1.0.2</Version>
 	</PropertyGroup>
 

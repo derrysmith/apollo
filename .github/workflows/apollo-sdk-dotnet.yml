@@ -1,23 +1,23 @@
 name: Compile and Publish Apollo SDK NuGet Packages
 
 on:
-  push:
+  pull_request: # whenever we open add commits to a pr targeting the main branch
     branches:
       - main
-  workflow_dispatch:
+  push:
+    branches: # whenever we commit to the main branch
+      - main
 
 jobs:
   compile:
     name: Compile Apollo SDK NuGet Packages
     runs-on: ubuntu-latest
+    environment: production
     permissions:
       packages: write
     steps:
       - name: checkout repository
         uses: actions/checkout@v4
-      
-      # - name: configure nuget
-      #   run: dotnet nuget add source --username ${{ github.actor }} --password ${{ secrets.GITHUB_TOKEN }}
       
       - name: compile libraries
         run: dotnet build ./apollo-sdk --configuration Release
@@ -29,4 +29,4 @@ jobs:
         run: dotnet pack ./apollo-sdk --no-restore --no-build --configuration Release --output ./apollo-sdk/pkg
 
       - name: publish libraries
-        run: dotnet nuget push ./apollo-sdk/pkg/**/*.nupkg -s https://nuget.pkg.github.com/derrysmith/index.json -k ${{ secrets.GITHUB_TOKEN }} --skip-duplicate
+        run: dotnet nuget push ./apollo-sdk/pkg/**/*.nupkg -s ${{ env.NUGET_SOURCE }} https://nuget.pkg.github.com/derrysmith/index.json -k ${{ secrets.GITHUB_TOKEN }} --skip-duplicate
