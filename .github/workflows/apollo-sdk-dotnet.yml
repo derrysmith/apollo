@@ -23,6 +23,7 @@ jobs:
         run: dotnet test ./apollo-sdk --no-restore --no-build --configuration Release
 
       - name: package libraries
+        if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }}
         run: dotnet pack ./apollo-sdk --no-restore --no-build --configuration Release --output ./apollo-sdk/pkg
 
       - name: upload packages
