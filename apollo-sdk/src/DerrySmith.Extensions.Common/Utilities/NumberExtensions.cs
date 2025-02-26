@@ -37,7 +37,6 @@ public static class NumberExtensions
 
 	public static string ToEnglish(this long number)
 	{
-		var x = long.MaxValue;
 		return number switch
 		{
 			< 20   => _ones[number],
