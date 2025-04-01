@@ -12,6 +12,14 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DerrySmith.Extensions.Commo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DerrySmith.Extensions.Domain.Tests", "test\DerrySmith.Extensions.Domain.Tests\DerrySmith.Extensions.Domain.Tests.csproj", "{1D669606-8DE7-4433-ACF6-58856C254A25}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DerrySmith.Data.EntityFramework", "src\DerrySmith.Data.EntityFramework\DerrySmith.Data.EntityFramework.csproj", "{0759C5D0-BC30-4B3C-A733-920B6C862FC6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DerrySmith.Core.Common", "src\DerrySmith.Core.Common\DerrySmith.Core.Common.csproj", "{293927F0-27B5-40CE-9810-1A37E84FDE0F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DerrySmith.Core.Common.Tests", "test\DerrySmith.Core.Common.Tests\DerrySmith.Core.Common.Tests.csproj", "{B4947BF8-6CA2-4F0E-BE32-9F3C93AD5FF9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DerrySmith.Core.Domain", "src\DerrySmith.Core.Domain\DerrySmith.Core.Domain.csproj", "{F01283BC-44EA-48F0-9FFB-04FD8D2D8948}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -22,6 +30,10 @@ Global
 		{C9DEFFBE-1BF1-49EC-ACCC-F87D533702C7} = {97DD3F74-5766-4259-B0EE-64C6F64762D7}
 		{B0299665-039D-4562-B7C4-F823E4DA6D26} = {A85F54E2-9DCA-41F9-BC32-4763BD012CA2}
 		{1D669606-8DE7-4433-ACF6-58856C254A25} = {A85F54E2-9DCA-41F9-BC32-4763BD012CA2}
+		{0759C5D0-BC30-4B3C-A733-920B6C862FC6} = {97DD3F74-5766-4259-B0EE-64C6F64762D7}
+		{293927F0-27B5-40CE-9810-1A37E84FDE0F} = {97DD3F74-5766-4259-B0EE-64C6F64762D7}
+		{B4947BF8-6CA2-4F0E-BE32-9F3C93AD5FF9} = {A85F54E2-9DCA-41F9-BC32-4763BD012CA2}
+		{F01283BC-44EA-48F0-9FFB-04FD8D2D8948} = {97DD3F74-5766-4259-B0EE-64C6F64762D7}
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{6B5E4DBF-909B-4C6E-83E4-7A5DCB649004}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -40,5 +52,21 @@ Global
 		{1D669606-8DE7-4433-ACF6-58856C254A25}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1D669606-8DE7-4433-ACF6-58856C254A25}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1D669606-8DE7-4433-ACF6-58856C254A25}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0759C5D0-BC30-4B3C-A733-920B6C862FC6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0759C5D0-BC30-4B3C-A733-920B6C862FC6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0759C5D0-BC30-4B3C-A733-920B6C862FC6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0759C5D0-BC30-4B3C-A733-920B6C862FC6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{293927F0-27B5-40CE-9810-1A37E84FDE0F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{293927F0-27B5-40CE-9810-1A37E84FDE0F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{293927F0-27B5-40CE-9810-1A37E84FDE0F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{293927F0-27B5-40CE-9810-1A37E84FDE0F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B4947BF8-6CA2-4F0E-BE32-9F3C93AD5FF9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B4947BF8-6CA2-4F0E-BE32-9F3C93AD5FF9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B4947BF8-6CA2-4F0E-BE32-9F3C93AD5FF9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B4947BF8-6CA2-4F0E-BE32-9F3C93AD5FF9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F01283BC-44EA-48F0-9FFB-04FD8D2D8948}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F01283BC-44EA-48F0-9FFB-04FD8D2D8948}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F01283BC-44EA-48F0-9FFB-04FD8D2D8948}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F01283BC-44EA-48F0-9FFB-04FD8D2D8948}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

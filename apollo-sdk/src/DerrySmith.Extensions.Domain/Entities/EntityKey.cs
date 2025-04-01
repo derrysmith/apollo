@@ -12,14 +12,13 @@ public abstract record EntityKey<TEntityKey>
 		_attribute = EntityKey<TEntityKey>.GetEntityKeyAttribute() ?? new EntityKeyAttribute();
 	}
 
-	private string? _value;
+	private string _value;
 
 	protected EntityKey() : this(string.Empty) { }
 
 	private EntityKey(string value)
 	{
-		if (!string.IsNullOrEmpty(value))
-			_value = value;
+		_value = string.IsNullOrEmpty(value) ? string.Empty : value;
 	}
 
 	public static TEntityKey New()
@@ -39,11 +38,9 @@ public abstract record EntityKey<TEntityKey>
 		return entityKey;
 	}
 
-	public bool IsEmpty()
-		=> string.IsNullOrEmpty(_value);
+	public bool IsEmpty() => string.IsNullOrEmpty(_value);
 
-	public sealed override string ToString()
-		=> _value ?? base.ToString() ?? typeof(TEntityKey).Name;
+	public sealed override string ToString() => _value ?? base.ToString() ?? typeof(TEntityKey).Name;
 
 	private static EntityKeyAttribute? GetEntityKeyAttribute()
 	{
@@ -51,6 +48,7 @@ public abstract record EntityKey<TEntityKey>
 		var entityKeyAttr = entityKeyType.GetCustomAttribute<EntityKeyAttribute>();
 
 		return entityKeyAttr;
+		
 	}
 
 	private void SetValue(string value)
