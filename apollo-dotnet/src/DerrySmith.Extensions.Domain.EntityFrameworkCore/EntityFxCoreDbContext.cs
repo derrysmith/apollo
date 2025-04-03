@@ -11,6 +11,8 @@ public abstract class EntityFxCoreDbContext : DbContext
 	public const string UpdatedAtShadowProperty  = "UpdatedAt";
 	public const string RowVersionShadowProperty = "RowVersion";
 
+	protected EntityFxCoreDbContext(DbContextOptions options) : base(options) { }
+
 	public override Task<int> SaveChangesAsync(CancellationToken cancellationToken = new CancellationToken())
 	{
 		foreach (var entry in this.ChangeTracker.Entries<IEntity>())
