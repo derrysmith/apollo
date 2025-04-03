@@ -1,0 +1,13 @@
+<Project>
+    <PropertyGroup>
+        <Authors>derrysmith</Authors>
+        <RepositoryType>git</RepositoryType>
+        <RepositoryUrl>https://github.com/derrysmith/apollo</RepositoryUrl>
+        <Version>1.0.0</Version>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="FakeItEasy" Version="8.3.0" />
+        <PackageReference Include="Shouldly" Version="4.3.0" />
+    </ItemGroup>
+</Project>
