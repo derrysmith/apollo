@@ -1,0 +1,33 @@
+name: Build and Deploy Apollo Nuget Packages
+
+on:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - '.github/workflows/deploy-apollo-dotnet.yml'
+      - 'apollo-dotnet/**/*'
+  push:
+    branches:
+      - main
+    paths:
+      - '.github/workflows/deploy-apollo-dotnet.yml'
+      - 'apollo-dotnet/**/*'
+
+jobs:
+  compile:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout
+
+      - name: Configure .NET
+        uses: actions/setup-dotnet
+        with:
+          dotnet-version: 9.0.x
+      
+      - name: Compile NuGet Package
+        run: dotnet pack ./apollo-dotnet/apollo-dotnet.sln -o ./apollo-dotnet/pkg
+
+      - name: Publish NuGet Package
+        run: dotnet nuget push ./apollo-dotnet/pkg/*.nupkg --api-key ${{ secrets.GITHUB_TOKEN }} --source "https://nuget.pkg.github.com/derrysmith/index.json"
