@@ -19,12 +19,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repository
-        uses: actions/checkout
+        uses: actions/checkout@v4
 
       - name: Configure .NET
-        uses: actions/setup-dotnet
+        uses: actions/setup-dotnet@v4
         with:
-          dotnet-version: 9.0.x
+          dotnet-version: "9.0.x"
       
       - name: Compile NuGet Package
         run: dotnet pack ./apollo-dotnet/apollo-dotnet.sln -o ./apollo-dotnet/pkg
