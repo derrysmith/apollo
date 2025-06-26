@@ -1,4 +1,5 @@
 ﻿using HotChocolate.Execution.Configuration;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.Hosting;
 
 namespace DerrySmith.Extensions.Core.HotChocolate;
@@ -10,5 +11,10 @@ public static class HotChocolateHostingExtensions
 	{
 		var builder = options.Builder.AddGraphQL();
 		configure?.Invoke(builder);
+	}
+
+	public static void MapHotChocolate(this CoreHostingApplicationOptions options)
+	{
+		options.App.MapGraphQL();
 	}
 }
