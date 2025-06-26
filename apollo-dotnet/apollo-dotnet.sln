@@ -8,6 +8,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{A9EBEA46-8
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DerrySmith.Extensions.Core.Tests", "test\DerrySmith.Extensions.Core.Tests\DerrySmith.Extensions.Core.Tests.csproj", "{D0992B07-9B7B-4D6B-91C7-73F4BE38ECD8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DerrySmith.Extensions.Core.Wolverine", "src\DerrySmith.Extensions.Core.Wolverine\DerrySmith.Extensions.Core.Wolverine.csproj", "{4127AAA4-9954-40B4-9ECD-4898DA0ED9AE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -16,6 +18,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{F4D917B2-32E8-4FA2-B505-B8992F12A50A} = {FD9965C7-56CE-40C7-B45E-A02318572037}
 		{D0992B07-9B7B-4D6B-91C7-73F4BE38ECD8} = {A9EBEA46-8EA2-4639-A8A5-043CEE21F38E}
+		{4127AAA4-9954-40B4-9ECD-4898DA0ED9AE} = {FD9965C7-56CE-40C7-B45E-A02318572037}
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{F4D917B2-32E8-4FA2-B505-B8992F12A50A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -26,5 +29,9 @@ Global
 		{D0992B07-9B7B-4D6B-91C7-73F4BE38ECD8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D0992B07-9B7B-4D6B-91C7-73F4BE38ECD8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D0992B07-9B7B-4D6B-91C7-73F4BE38ECD8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4127AAA4-9954-40B4-9ECD-4898DA0ED9AE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4127AAA4-9954-40B4-9ECD-4898DA0ED9AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4127AAA4-9954-40B4-9ECD-4898DA0ED9AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4127AAA4-9954-40B4-9ECD-4898DA0ED9AE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
