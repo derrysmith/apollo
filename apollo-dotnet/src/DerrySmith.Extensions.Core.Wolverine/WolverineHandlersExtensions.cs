@@ -1,8 +1,8 @@
 using Wolverine;
 
-namespace DerrySmith.Extensions.Core.Wolverine.Handlers;
+namespace DerrySmith.Extensions.Core.Wolverine;
 
-public static class CoreWolverineHandlersExtensions
+public static class WolverineHandlersExtensions
 {
 	public static void UseWolverine(this CoreHandlersOptions options, Action<WolverineOptions>? configure = null)
 	{

@@ -10,6 +10,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DerrySmith.Extensions.Core.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DerrySmith.Extensions.Core.Wolverine", "src\DerrySmith.Extensions.Core.Wolverine\DerrySmith.Extensions.Core.Wolverine.csproj", "{4127AAA4-9954-40B4-9ECD-4898DA0ED9AE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DerrySmith.Extensions.Core.HotChocolate", "src\DerrySmith.Extensions.Core.HotChocolate\DerrySmith.Extensions.Core.HotChocolate.csproj", "{1F964283-2120-4677-A453-CA0669A0BADE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,6 +21,7 @@ Global
 		{F4D917B2-32E8-4FA2-B505-B8992F12A50A} = {FD9965C7-56CE-40C7-B45E-A02318572037}
 		{D0992B07-9B7B-4D6B-91C7-73F4BE38ECD8} = {A9EBEA46-8EA2-4639-A8A5-043CEE21F38E}
 		{4127AAA4-9954-40B4-9ECD-4898DA0ED9AE} = {FD9965C7-56CE-40C7-B45E-A02318572037}
+		{1F964283-2120-4677-A453-CA0669A0BADE} = {FD9965C7-56CE-40C7-B45E-A02318572037}
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{F4D917B2-32E8-4FA2-B505-B8992F12A50A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -33,5 +36,9 @@ Global
 		{4127AAA4-9954-40B4-9ECD-4898DA0ED9AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4127AAA4-9954-40B4-9ECD-4898DA0ED9AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4127AAA4-9954-40B4-9ECD-4898DA0ED9AE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1F964283-2120-4677-A453-CA0669A0BADE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1F964283-2120-4677-A453-CA0669A0BADE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1F964283-2120-4677-A453-CA0669A0BADE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1F964283-2120-4677-A453-CA0669A0BADE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
