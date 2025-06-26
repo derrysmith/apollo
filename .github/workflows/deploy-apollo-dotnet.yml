@@ -30,8 +30,11 @@ jobs:
         with:
           dotnet-version: "9.0.x"
       
-      - name: Compile NuGet Package
-        run: dotnet pack ./apollo-dotnet/apollo-dotnet.sln -o ./apollo-dotnet/pkg
+      - name: Test NuGet Packages
+        run: dotnet test ./apollo-dotnet/apollo-dotnet.sln -c Release
 
-      - name: Publish NuGet Package
+      - name: Compile NuGet Packages
+        run: dotnet pack ./apollo-dotnet/apollo-dotnet.sln --no-restore --no-build -c Release -o ./apollo-dotnet/pkg
+
+      - name: Publish NuGet Packages
         run: dotnet nuget push ./apollo-dotnet/pkg/*.nupkg --skip-duplicate --api-key ${{ secrets.GITHUB_TOKEN }} --source "https://nuget.pkg.github.com/derrysmith/index.json"
