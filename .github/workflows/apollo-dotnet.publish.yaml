@@ -1,0 +1,32 @@
+name: Publish Apollo NuGet Packages
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'apollo-dotnet/**/*'
+      - '.github/workflows/apollo-dotnet.*.yaml'
+
+jobs:
+  compile:
+    name: compile nuget packages
+    uses: ./.github/workflows/apollo-dotnet.compile.yaml
+  publish:
+    name: publish nuget packages
+    runs-on: ubuntu-latest
+    needs: compile
+    permissions:
+      contents: read
+      packages: write
+    env:
+      PACKAGE_SOURCE: 'https://nuget.pkg.github.com/derrysmith/index.json'
+    steps:
+      - name: Download NuGet Artifacts
+        uses: actions/download-artifact@v4
+        with:
+          name: apollo-nuget-packages
+          path: ./apollo-dotnet/pkg
+
+      - name: Publish NuGet Packages
+        run: dotnet nuget push ./apollo-dotnet/pkg/*.nupkg --skip-duplicate --api-key ${{ secrets.GITHUB_TOKEN }} --source ${{ env.PACKAGE_SOURCE }}
