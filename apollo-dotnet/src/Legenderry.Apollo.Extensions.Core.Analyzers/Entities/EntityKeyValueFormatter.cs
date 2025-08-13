@@ -1,4 +1,4 @@
-namespace DerrySmith.Apollo.Extensions.Core.Entities;
+namespace Legenderry.Apollo.Extensions.Core.Entities;
 
 /// <summary>
 /// Represents a method that formats the raw entity key value.

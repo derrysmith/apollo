@@ -19,7 +19,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<ProjectReference Include="..\..\src\DerrySmith.Apollo.Extensions.Core.Analyzers\DerrySmith.Apollo.Extensions.Core.Analyzers.csproj"
+		<ProjectReference Include="..\..\src\Legenderry.Apollo.Extensions.Core.Analyzers\Legenderry.Apollo.Extensions.Core.Analyzers.csproj"
 		                  OutputItemType="Analyzer" ReferenceOutputAssembly="true"/>
 	</ItemGroup>
 

@@ -4,7 +4,7 @@ using System.Threading;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.Text;
 
-namespace DerrySmith.Apollo.Extensions.Core.Entities;
+namespace Legenderry.Apollo.Extensions.Core.Entities;
 
 [Generator]
 internal class EntityKeyGenerator : IIncrementalGenerator

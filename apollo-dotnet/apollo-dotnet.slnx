@@ -1,9 +1,9 @@
 ﻿<Solution>
   <Folder Name="/src/">
-    <Project Path="src\DerrySmith.Apollo.Extensions.Core.Analyzers\DerrySmith.Apollo.Extensions.Core.Analyzers.csproj" Type="Classic C#" />
-    <Project Path="src\DerrySmith.Apollo.Extensions.Core\DerrySmith.Apollo.Extensions.Core.csproj" Type="Classic C#" />
+    <Project Path="src\Legenderry.Apollo.Extensions.Core.Analyzers\Legenderry.Apollo.Extensions.Core.Analyzers.csproj" Type="Classic C#" />
+    <Project Path="src\Legenderry.Apollo.Extensions.Core\Legenderry.Apollo.Extensions.Core.csproj" Type="Classic C#" />
   </Folder>
   <Folder Name="/test/">
-    <Project Path="test\DerrySmith.Apollo.Extensions.Core.Tests\DerrySmith.Apollo.Extensions.Core.Tests.csproj" Type="Classic C#" />
+    <Project Path="test\Legenderry.Apollo.Extensions.Core.Tests\Legenderry.Apollo.Extensions.Core.Tests.csproj" Type="Classic C#" />
   </Folder>
 </Solution>

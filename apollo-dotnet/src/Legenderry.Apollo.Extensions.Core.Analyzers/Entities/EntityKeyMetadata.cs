@@ -1,4 +1,4 @@
-namespace DerrySmith.Apollo.Extensions.Core.Entities;
+namespace Legenderry.Apollo.Extensions.Core.Entities;
 
 internal record EntityKeyMetadata
 {

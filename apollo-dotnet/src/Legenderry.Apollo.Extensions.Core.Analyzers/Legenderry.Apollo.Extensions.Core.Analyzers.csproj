@@ -1,14 +1,13 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
-		<Description>Provides source generators for building strongly typed domain entity identifiers.</Description>
 		<EnforceExtendedAnalyzerRules>true</EnforceExtendedAnalyzerRules>
 		<GenerateDocumentationFile>true</GenerateDocumentationFile>
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
 		<LangVersion>latest</LangVersion>
 		<Nullable>enable</Nullable>
-		<PackageId>DerrySmith.Apollo.Extensions.Core.Analyzers</PackageId>
-		<RootNamespace>DerrySmith.Apollo.Extensions.Core</RootNamespace>
+		<PackageId>Legenderry.Apollo.Extensions.Core.Analyzers</PackageId>
+		<RootNamespace>Legenderry.Apollo.Extensions.Core</RootNamespace>
 		<TargetFramework>netstandard2.0</TargetFramework>
 	</PropertyGroup>
 
@@ -17,7 +16,7 @@
 		<PackageReference Include="Microsoft.CodeAnalysis.CSharp" Version="4.14.0" PrivateAssets="all"/>
 		<PackageReference Include="Ulid" Version="1.4.1" />
 	</ItemGroup>
-	
+
 	<ItemGroup>
 		<!-- package the generator in the analyzer directory of the nuget package -->
 		<None Include="$(OutputPath)\$(AssemblyName).dll" Pack="true" PackagePath="analyzers/dotnet/cs" Visible="false" />
