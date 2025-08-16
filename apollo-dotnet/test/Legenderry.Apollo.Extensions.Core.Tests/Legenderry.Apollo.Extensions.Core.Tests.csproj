@@ -21,6 +21,7 @@
 	<ItemGroup>
 		<ProjectReference Include="..\..\src\Legenderry.Apollo.Extensions.Core.Analyzers\Legenderry.Apollo.Extensions.Core.Analyzers.csproj"
 		                  OutputItemType="Analyzer" ReferenceOutputAssembly="true"/>
+		<ProjectReference Include="..\..\src\Legenderry.Apollo.Extensions.Core\Legenderry.Apollo.Extensions.Core.csproj" />
 	</ItemGroup>
 
 </Project>
