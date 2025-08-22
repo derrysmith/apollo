@@ -1,16 +1,31 @@
 ## apollo
 
+<!-- badges -->
+
+<!-- readme -->
+Open-source library for building enterprise .NET and ASP.NET Core software solutions. Provides fundamental infrastructure,
+orthogonal concerns, and core models for building applications in a clean and domain-driven style.
+
+## Getting Started
+
+### Installation
+
+### Usage
+
 ```
 > derrysmith/apollo
-	> apollo-dotnet
+	> dotnet
 		> src
-			> DerrySmith.Apollo.Extensions.Core
-			> DerrySmith.Apollo.Extensions.Core.Abstractions
-			> DerrySmith.Apollo.Extensions.Core.Analyzers
-		> test
-			> DerrySmith.Apollo.Extensions.Core.Tests
-		- apollo-dotnet.slnx
-	> apollo-nodejs
+			> DerrySmith.Extensions.Auth
+			> DerrySmith.Extensions.Core
+			> DerrySmith.Extensions.Data
+		- dotnet.slnx
+	> nodejs
+		> src
+			> auth
+			> core
+			> data
+		- package.json (name: @derrysmith/extensions)
 ```
 
 ### Usage

@@ -1,0 +1,8 @@
+﻿<Solution>
+  <Folder Name="/src/">
+    <Project Path="src\DerrySmith.Extensions.Core\DerrySmith.Extensions.Core.csproj" Type="Classic C#" />
+  </Folder>
+  <Folder Name="/test/">
+    <Project Path="test\DerrySmith.Extensions.Core.Tests\DerrySmith.Extensions.Core.Tests.csproj" Type="Classic C#" />
+  </Folder>
+</Solution>

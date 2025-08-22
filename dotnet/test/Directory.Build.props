@@ -1,0 +1,9 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+	<!-- package dependencies for test projects -->
+	<ItemGroup>
+		<PackageReference Include="FakeItEasy" Version="8.3.0" />
+		<PackageReference Include="Shouldly" Version="4.3.0" />
+		<Using Include="FakeItEasy" />
+		<Using Include="Shouldly" />
+	</ItemGroup>
+</Project>

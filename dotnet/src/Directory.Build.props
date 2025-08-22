@@ -1,0 +1,12 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+	<!-- package version for published libraries -->
+	<PropertyGroup>
+		<Version>1.0.1</Version>
+	</PropertyGroup>
+
+	<!-- package dependencies for published libraries -->
+	<ItemGroup>
+		<PackageReference Include="CommunityToolkit.Diagnostics" Version="8.4.0" />
+		<Using Include="CommunityToolkit.Diagnostics" />
+	</ItemGroup>
+</Project>
