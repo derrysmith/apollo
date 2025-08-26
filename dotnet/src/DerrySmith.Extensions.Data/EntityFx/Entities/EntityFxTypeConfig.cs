@@ -2,7 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace DerrySmith.Extensions.Data.Entities;
+namespace DerrySmith.Extensions.Data.EntityFx.Entities;
 
 public abstract class EntityFxTypeConfig<TEntity, TEntityKey> : IEntityTypeConfiguration<TEntity>
 	where TEntity : class, IEntity<TEntityKey>

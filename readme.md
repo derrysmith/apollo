@@ -12,22 +12,6 @@ orthogonal concerns, and core models for building applications in a clean and do
 
 ### Usage
 
-```
-> derrysmith/apollo
-	> dotnet
-		> src
-			> DerrySmith.Extensions.Auth
-			> DerrySmith.Extensions.Core
-			> DerrySmith.Extensions.Data
-		- dotnet.slnx
-	> nodejs
-		> src
-			> auth
-			> core
-			> data
-		- package.json (name: @derrysmith/extensions)
-```
-
 ### Usage
 
 #### Entities

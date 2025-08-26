@@ -5,13 +5,13 @@ on:
     branches:
       - main
     paths:
-      - 'dotnet/**/*'
-      - '.github/workflows/dotnet.*.yaml'
+      - 'apollo-dotnet/**/*'
+      - '.github/workflows/apollo-dotnet.*.yaml'
 
 jobs:
   compile:
     name: compile nuget packages
-    uses: ./.github/workflows/dotnet.compile.yaml
+    uses: ./.github/workflows/apollo-dotnet.compile.yaml
   publish:
     name: publish nuget packages
     runs-on: ubuntu-latest
@@ -26,7 +26,7 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: nuget-packages
-          path: ./dotnet/pkg
+          path: ./apollo-dotnet/pkg
 
       - name: Publish NuGet Packages
-        run: dotnet nuget push ./dotnet/pkg/*.nupkg --skip-duplicate --api-key ${{ secrets.GITHUB_TOKEN }} --source ${{ env.PACKAGE_SOURCE }}
+        run: dotnet nuget push ./apollo-dotnet/pkg/*.nupkg --skip-duplicate --api-key ${{ secrets.GITHUB_TOKEN }} --source ${{ env.PACKAGE_SOURCE }}

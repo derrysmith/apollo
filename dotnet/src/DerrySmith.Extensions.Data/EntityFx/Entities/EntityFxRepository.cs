@@ -1,8 +1,8 @@
 using DerrySmith.Extensions.Core.Entities;
-using DerrySmith.Extensions.Data.Database;
+using DerrySmith.Extensions.Data.EntityFx.Database;
 using Microsoft.EntityFrameworkCore;
 
-namespace DerrySmith.Extensions.Data.Entities;
+namespace DerrySmith.Extensions.Data.EntityFx.Entities;
 
 public abstract class EntityFxRepository<TEntity, TEntityKey, TDbContext> : IEntityRepository<TEntity, TEntityKey>
 	where TEntity : class, IEntity<TEntityKey>

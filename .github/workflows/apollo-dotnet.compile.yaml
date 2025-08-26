@@ -5,8 +5,8 @@ on:
     branches:
       - main
     paths:
-      - 'dotnet/**/*'
-      - '.github/workflows/dotnet.*.yaml'
+      - 'apollo-dotnet/**/*'
+      - '.github/workflows/apollo-dotnet.*.yaml'
   workflow_call:
 
 jobs:
@@ -23,15 +23,15 @@ jobs:
           global-json-file: 'dotnet/global.json'
       
       - name: Compile Projects
-        run: dotnet test ./dotnet -c Release
+        run: dotnet test ./apollo-dotnet -c Release
       
       - name: Package Projects
-        run: dotnet pack ./dotnet -c Release -o ./dotnet/pkg --no-restore
+        run: dotnet pack ./apollo-dotnet -c Release -o ./apollo-dotnet/pkg --no-restore
       
       - name: Upload NuGet Artifacts
         uses: actions/upload-artifact@v4
         with:
           name: nuget-packages
-          path: ./dotnet/pkg
+          path: ./apollo-dotnet/pkg
           overwrite: 'true'
           retention-days: 2

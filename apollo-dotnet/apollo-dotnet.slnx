@@ -1,0 +1,5 @@
+﻿<Solution>
+  <Folder Name="/src/">
+    <Project Path="src\Apollo.Extensions.Core\Apollo.Extensions.Core.csproj" Type="Classic C#" />
+  </Folder>
+</Solution>
