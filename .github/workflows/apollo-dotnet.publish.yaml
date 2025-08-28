@@ -11,7 +11,7 @@ on:
 jobs:
   compile:
     name: compile nuget packages
-    uses: ./.github/workflows/apollo-dotnet.compile.yaml
+    uses: '.github/workflows/apollo-dotnet.compile.yaml'
   publish:
     name: publish nuget packages
     runs-on: ubuntu-latest
