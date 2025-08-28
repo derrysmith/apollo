@@ -1,4 +1,4 @@
-name: Compile NuGet Packages
+name: Compile Libraries
 
 on:
   pull_request:
@@ -22,8 +22,11 @@ jobs:
         with:
           global-json-file: 'apollo-dotnet/global.json'
       
-      - name: Compile Projects
-        run: dotnet test ./apollo-dotnet -c Release
+      - name: Build Projects
+        run: dotnet build ./apollo-dotnet -c Release
+        
+      - name: Test Projects
+        run: dotnet test ./apollo-dotnet -c Release --no-restore --no-build
       
       - name: Package Projects
         run: dotnet pack ./apollo-dotnet -c Release -o ./apollo-dotnet/pkg --no-restore
