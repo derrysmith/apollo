@@ -58,7 +58,7 @@ public abstract record EntityKey<TEntityKey> : IEntityKey<TEntityKey>
 			case EntityKeyValueType.Ulid:
 				parseResult = Ulid.TryParse(entityKeyValueString, out var ulid);
 				entityKey   = parseResult ? Create(ulid.ToString()) : null!;
-
+				
 				break;
 			default:
 				entityKey = null!;

@@ -1,0 +1,1 @@
+﻿namespace Apollo.Libraries.Core.Entities;

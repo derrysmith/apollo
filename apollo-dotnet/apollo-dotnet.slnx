@@ -1,5 +1,11 @@
 ﻿<Solution>
   <Folder Name="/src/">
     <Project Path="src\Apollo.Extensions.Core\Apollo.Extensions.Core.csproj" Type="Classic C#" />
+    <Project Path="src\Apollo.Libraries.Core.Analyzers\Apollo.Libraries.Core.Analyzers.csproj" Type="Classic C#" />
+    <Project Path="src\Apollo.Libraries.Core\Apollo.Libraries.Core.csproj" Type="Classic C#" />
+  </Folder>
+  <Folder Name="/test/">
+    <Project Path="test\Apollo.Libraries.Core.Analyzers.Tests\Apollo.Libraries.Core.Analyzers.Tests.csproj" Type="Classic C#" />
+    <Project Path="test\Apollo.Libraries.Core.Tests\Apollo.Libraries.Core.Tests.csproj" Type="Classic C#" />
   </Folder>
 </Solution>
