@@ -12,16 +12,16 @@ internal class EntityKeyGenerator : IIncrementalGenerator
 	public void Initialize(IncrementalGeneratorInitializationContext context)
 	{
 		// generate entity key attribute
-		const string entityKeyAttributeFileName = "Apollo.Libraries.Core.Entities.EntityKeyAttribute.g.cs";
-		context.RegisterPostInitializationOutput(ctx => ctx.AddSource(
-			entityKeyAttributeFileName,
-			SourceText.From(EntityKeyGeneratorHelpers.EntityKeyAttributeSourceCode, Encoding.UTF8)));
+		// const string entityKeyAttributeFileName = "Apollo.Libraries.Core.Entities.EntityKeyAttribute.g.cs";
+		// context.RegisterPostInitializationOutput(ctx => ctx.AddSource(
+		// 	entityKeyAttributeFileName,
+		// 	SourceText.From(EntityKeyGeneratorHelpers.EntityKeyAttributeSourceCode, Encoding.UTF8)));
 
 		// generate entity key interface
-		const string entityKeyInterfaceFileName = "Apollo.Libraries.Core.Entities.IEntityKey.g.cs";
-		context.RegisterPostInitializationOutput(ctx => ctx.AddSource(
-			entityKeyInterfaceFileName,
-			SourceText.From(EntityKeyGeneratorHelpers.EntityKeyInterfaceSourceCode, Encoding.UTF8)));
+		// const string entityKeyInterfaceFileName = "Apollo.Libraries.Core.Entities.IEntityKey.g.cs";
+		// context.RegisterPostInitializationOutput(ctx => ctx.AddSource(
+		// 	entityKeyInterfaceFileName,
+		// 	SourceText.From(EntityKeyGeneratorHelpers.EntityKeyInterfaceSourceCode, Encoding.UTF8)));
 
 		// generate entity key
 		var entityKeys = context.SyntaxProvider.ForAttributeWithMetadataName(
